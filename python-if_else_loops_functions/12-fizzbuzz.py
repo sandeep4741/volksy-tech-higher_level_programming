@@ -9,4 +9,4 @@ for i in range(1,100):
     elif i % 5 == 0:
         print("Buzz")
         continue
-    print(i)
+    print(i, end="")
