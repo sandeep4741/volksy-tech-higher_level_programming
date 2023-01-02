@@ -4,5 +4,5 @@ for i in range(1,100):
          print("FizzBuzz")
     elif i % 3 == 0:
         print("Fizz")
-    elif I % 5 == 0:
+    elif i % 5 == 0:
         print("Buzz")
