@@ -5,4 +5,4 @@ def no_c(my_string):
         if i == "c" or i =="C":
             i = ''
         res.append(i)
-    return ("".join(copy))
+    return ("".join(res))
