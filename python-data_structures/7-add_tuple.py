@@ -1,9 +1,20 @@
 #!/usr/bin/python3
-add_tuple = __import__('7-add_tuple').add_tuple
-
 def add_tuple(tuple_a=(), tuple_b=()):
-    new_tuple = add_tuple(tuple_a, tuple_b)
-    print(new_tuple)
+    a = (0, 0)
+    b = (0, 0)
 
-    print(add_tuple(tuple_a, (1, )))
-    print(add_tuple(tuple_a, ()))
+    if len(tuple_a) == 0:
+        a = (0, 0)
+    elif len(tuple_a) == 1:
+        a = (tuple_a[0], 0)
+    elif len(tuple_a) >= 2:
+        a = (tuple_a[0], tuple_a[1])
+
+    if len(tuple_b) == 0:
+        b = (0, 0)
+    elif len(tuple_b) == 1:
+        b = (tuple_b[0], 0)
+    elif len(tuple_b) >= 2:
+        b = (tuple_b[0], tuple_b[1])
+
+    return (a[0] + b[0], a[1] + b[1])
