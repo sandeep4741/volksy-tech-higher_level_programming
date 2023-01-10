@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """square"""
-    def __init__(self):
-        """initialize square attributes"""
-        return None
+    #python3 -c 'print(__import__("my_module").my_function.__doc__)
+    #python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)
+    pass
+
