@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """Empty class"""
-    pass
+    """square"""
+    def __init__(self):
+        """initialize square attributes"""
+        return None
