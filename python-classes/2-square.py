@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+'''square'''
 class Square:
-    """square"""
+       """inisialazztion"""
 
-    def __init__(self, size=0):
-        """inisialazztion"""
+    def __init__(self, size):
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size >= 0:
