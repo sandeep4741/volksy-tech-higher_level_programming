@@ -5,4 +5,4 @@
 def is_same_class(obj, a_class):
     '''args passing'''
 
-    return obj == a_class
+    return type(obj) is a_class
