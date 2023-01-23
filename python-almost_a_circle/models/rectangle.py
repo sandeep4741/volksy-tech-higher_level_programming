@@ -1,18 +1,4 @@
-#!/usr/bin/python3
-""" Unittest for the Rectangle class.
-To ensure Rectangle is working as intended """
-
-import unittest
-import json
-from models import base
-from models.base import Base
-from models.rectangle import Rectangle
-
-
-class RectangleTesting(unittest.TestCase):
-    """ Test cases for the Rectangle class """
-
-    def setUp(cls):
+ def setUp(cls):
         """ Resets object to 0. For id """
         Base._Base__nb_objects = 0
 
@@ -60,3 +46,4 @@ class RectangleTesting(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+-- INSERT --                               
