@@ -1,0 +1,4 @@
+-- to list name and score
+SELECT SCORE, NAME FROM FIRST_TABLE
+WHERE SCORE >= 10
+ORDER BY DESC
