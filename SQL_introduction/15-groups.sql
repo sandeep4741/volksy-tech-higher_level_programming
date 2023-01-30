@@ -1,4 +1,5 @@
 -- count
-SELECT score, COUNT(score) AS number FROM second_table
-group by score,
-order by score desc;
+SELECT score, COUNT('score') as number
+FROM second_table
+GROUP BY score
+ORDER BY score DESC;
