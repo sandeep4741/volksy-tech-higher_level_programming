@@ -1,4 +1,5 @@
 -- creates second table
+-- add multiple rows
 CREATE TABLE IF NOT EXISTS SECOND_TABLE (
 	id INT,
         name VARCHAR(256),
