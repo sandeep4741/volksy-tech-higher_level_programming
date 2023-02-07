@@ -1,22 +1,18 @@
 #!/usr/bin/python3
 """takes in arguments and displays all values in the states"""
-import sys
 import MySQLdb
+from sys import argv
 
-def getStates():
-    mydb = MySQLdb.connect(host='localhost',
-                           user=sys.argv[1],
-                           passwd=sys.argv[2],
-                           db=sys.argv[3],
-                           port=3306)
-
-    mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM states WHERE name = %s \
-                      ORDER BY states.id", (sys.argv[4],))
-    myresult = mycursor.fetchall()
-
-    for x in myresult:
-        print(x)
-
-if __name__ == '__main__':
-    getStates()
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3])
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states WHERE name = %(name)s",
+                   {'name': argv[4]})
+    for data in cursor.fetchall():
+        print(data)
+    cursor.close()
+    db.close()
