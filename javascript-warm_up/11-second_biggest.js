@@ -1,8 +1,10 @@
 #!/usr/bin/node
-if (process.argv <= 3) {
+let array;
+if (process.argv.length === 2 || process.argv.length === 3) {
   console.log(0);
 } else {
-  const a = process.argv;
-  a.sort((a, b) => a - b);
-  console.log(a[a.length - 2]);
+  array = process.argv.slice(2);
+  array.sort(function (a, b) { return a - b; });
+  array.reverse();
+  console.log(array[1]);
 }
