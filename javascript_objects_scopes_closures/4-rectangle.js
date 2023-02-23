@@ -13,8 +13,8 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    this.width = this.width;
-    this.height = this.heigth;
+    this.width = this.height;
+    this.height = this.width;
   }
 
   double () {
