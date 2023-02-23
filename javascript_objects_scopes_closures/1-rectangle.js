@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-class Reactangle {
+class Rectangle {
     constructor(w, h) {
 	this.width = w;
 	this.height = h;
