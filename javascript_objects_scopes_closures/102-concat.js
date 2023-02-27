@@ -1,7 +1,6 @@
 #!/usr/bin/node
 // reads two text files and concatenates contents into new file
 const fs = require('fs');
-// fs is standard but needs import
 
 // each `readFile` and `writeFile` call is asynchronous
 fs.readFile(process.argv[2], (err, data) => {
