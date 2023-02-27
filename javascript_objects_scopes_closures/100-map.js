@@ -9,5 +9,3 @@ if (Array.isArray(list) && list.every(elem => typeof elem === 'number')) {
 } else {
   console.log(undefined);
 }
-Footer
-© 2023 GitHub, Inc.
