@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    res = []
+    str = ""
     for i in my_string:
-        if i == "c" or i == "C":
-            i = ''
-        res.append(i)
-    return ("".join(res))
+        if i == 'c' or i == 'C':
+            # print("{}".format(""), end="")
+            str = str + ""
+        else:
+            # print("{}".format(i), end="")
+            str = str + ("{}".format(i))
+    return str

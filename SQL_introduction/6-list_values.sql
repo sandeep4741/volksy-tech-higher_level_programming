@@ -1,2 +1,2 @@
--- list all from first_table
+-- 06
 SELECT * FROM first_table;

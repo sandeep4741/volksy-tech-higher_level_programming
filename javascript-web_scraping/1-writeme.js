@@ -1,13 +1,13 @@
 #!/usr/bin/node
-// writes string to a file
 const fs = require('fs');
+const file = process.argv[2];
+const content = process.argv[3];
 
-let filename = '';
-if (process.argv[2] !== undefined) {
-  filename = process.argv[2];
+function writeMe (file, content) {
+  fs.writeFile(file, content, function (err) {
+    if (err) {
+      console.log(err);
+    }
+  });
 }
-fs.writeFile(filename, process.argv[3], 'utf8', (err) => {
-  if (err) {
-    console.log(err);
-  }
-});
+writeMe(file, content);

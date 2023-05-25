@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-'''class'''
+"""BaseGeometry."""
 
 
 class BaseGeometry:
-    '''args'''
+    """base geometry."""
     pass

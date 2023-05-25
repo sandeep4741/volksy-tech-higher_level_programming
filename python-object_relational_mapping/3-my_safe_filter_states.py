@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""SQL Injection"""
-
-
-import sys
-import MySQLdb
-
+"""importing sql to pythondatabase"""
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    c = db.cursor()
-    c.execute("SELECT * FROM states")
-    for i in c:
-        if i[1] == sys.argv[4]:
-            print(i)
+    from sys import argv
+    import MySQLdb
+    db = MySQLdb.connect(host="localhost", user=argv[1],
+                         passwd=argv[2], db=argv[3])
+    cur = db.cursor()
+    cur.execute(" SELECT * FROM states WHERE name = %(name)s \
+            ORDER BY states.id ASC", {'name': argv[4]})
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
+    db.close()

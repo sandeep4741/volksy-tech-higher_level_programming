@@ -1,2 +1,2 @@
--- count the no of id's
-SELECT COUNT(id) FROM first_table WHERE id = 89;
+-- 08
+SELECT COUNT(*) FROM first_table WHERE id =89;

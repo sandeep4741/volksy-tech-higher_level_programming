@@ -1,2 +1,2 @@
--- to show all databases
+-- sanam
 SHOW DATABASES;

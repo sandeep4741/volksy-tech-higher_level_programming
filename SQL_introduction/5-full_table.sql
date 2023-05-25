@@ -1,2 +1,2 @@
--- to show all the data of table
+-- 05
 SHOW CREATE TABLE first_table;

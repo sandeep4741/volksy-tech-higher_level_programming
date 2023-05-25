@@ -1,7 +1,3 @@
 #!/usr/bin/python3
-def square_matrix_simple(abc=[]):
-    nre = []
-    for i in abc:
-        sd = map(lambda a: a**2, i)
-        nre.append(list(sd))
-    return nre
+def square_matrix_simple(matrix=[]):
+    return [list(map(lambda x:x * x, i))for i in matrix]

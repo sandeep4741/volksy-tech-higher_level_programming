@@ -1,12 +1,14 @@
 #!/usr/bin/node
-// uses Star Wars API to display title of film by id/release order
+// Get the title of Star Wars using API
 const request = require('request');
+const baseUrl = 'https://swapi-api.hbtn.io/api/films/';
+const filmId = process.argv[2];
 
-const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
-request(url, function (error, response, body) {
-  if (error) {
-    console.error(error);
+request.get(baseUrl + filmId, (err, response, body) => {
+  if (err === null) {
+    const data = JSON.parse(body);
+    console.log(data.title);
+  } else {
+    console.log(err);
   }
-  const film = JSON.parse(body);
-  console.log(film.title);
 });

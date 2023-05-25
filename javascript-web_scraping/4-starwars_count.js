@@ -1,21 +1,21 @@
 #!/usr/bin/node
-// uses Star Wars API to display amount of films featuring Wedge Antilles
+// prints the number of movies where the character "Wedge Antilles" is present
+
+const apiUrl = process.argv[2];
+const charToSearch = 18;
 const request = require('request');
 
-request(process.argv[2], function (error, response, body) {
-  if (error) {
-    console.error(error);
+request.get(apiUrl, (err, response, body) => {
+  if (err === null) {
+    const data = JSON.parse(body);
+    let films = data.results;
+    films = films.filter(
+      film => film.characters.find(
+        character => character.match(charToSearch)
+      )
+    );
+    console.log(films.length);
+  } else {
+    console.log(err);
   }
-  const films = JSON.parse(body).results;
-  const wedgeId = 18;
-  let count = 0;
-  for (const film of films) {
-    for (const url of film.characters) {
-      if (url.includes(
-        `/api/people/${wedgeId}/`)) {
-        count += 1;
-      }
-    }
-  }
-  console.log(count);
 });

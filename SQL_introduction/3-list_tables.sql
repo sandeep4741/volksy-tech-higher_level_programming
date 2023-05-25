@@ -1,2 +1,2 @@
--- to list all the tables
-SHOW TABLES;
+-- 03
+SHOW TABLES

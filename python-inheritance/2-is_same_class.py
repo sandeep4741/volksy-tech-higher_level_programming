@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-''' defining fun'''
+"""Defines a class-checking function."""
 
 
 def is_same_class(obj, a_class):
-    '''args passing'''
-
-    return type(obj) is a_class
+    """Otherwise - False."""
+    if type(obj) == a_class:
+        return True
+    return False

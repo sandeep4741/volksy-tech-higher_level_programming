@@ -1,1 +1,1 @@
-#!/usr/bin/node
+javascript_objects_scopes_closures

@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""append_write module"""
+""" append the new file"""
 
 
 def append_write(filename="", text=""):
-    """Appends a string"""
-    with open(filename, 'a') as f:
-        return f.write(text)
+    """ append new text and find the no of characters"""
+
+    with open(filename, "a+", encoding="utf=8") as f:
+        f.write(text)
+        return (len(text))

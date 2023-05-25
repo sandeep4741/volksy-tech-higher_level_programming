@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-'''classes'''
+""" hello """
 
 
 class Square:
-    """Square class"""
-
+    """ sanam 1"""
     def __init__(self, size):
         self.__size = size

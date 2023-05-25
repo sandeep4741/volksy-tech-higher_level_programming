@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""file module"""
+""" hello """
 
 
 def write_file(filename="", text=""):
-    """fun"""
-    with open(filename, 'w') as f:
-        return f.write(text)
+    """ no of characters in a file """
+
+    with open(filename, "w", encoding="utf -8") as f:
+        f.write(text)
+        return len(text)
